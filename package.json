@@ -1,7 +1,7 @@
 {
   "name": "cadviewer-testapp-vue-01",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.1.7",
+  "description": "CADViewer - JavaScript CAD Viewer sample implementation for VueJS",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -38,5 +38,33 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "author": "charnung",
+  "license": "TMS",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CADViewer/cadviewer-testapp-vue-01.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CADViewer"
+  },
+  "homepage": "https://cadviewer.com",
+  "keywords": [
+    "CAD",
+    "javascript",
+    "CAD Viewer",
+    "DWG",
+    "DXF",
+    "DWF",
+    "PDF",
+    "DGN",
+    "TIFF",
+    "Annotate",
+    "Redline",
+    "Space Management",
+    "CAFM",
+    "IOT",
+    "Asset Management"
+  ],
+  "main": "CADViewerCanvas.vue"
 }
