@@ -1,6 +1,6 @@
 {
   "name": "cadviewer-testapp-vue-01",
-  "version": "1.1.7",
+  "version": "1.1.08",
   "description": "CADViewer - JavaScript CAD Viewer sample implementation for VueJS",
   "scripts": {
     "serve": "vue-cli-service serve",

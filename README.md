@@ -8,6 +8,10 @@ This CADViewer Example is a reference implementation of CADViewer on Vue JS.
 npm i cadviewer-testapp-vue-01
 ```
 
+**NOTE: Please use [Github](https://github.com/CADViewer/cadviewer-testapp-vue-01) to download/clone this sample: [cadviewer-testapp-vue-01](https://github.com/CADViewer/cadviewer-testapp-vue-01) as the preferred route!** 
+
+
+
 Once the sample is up running, you need to install and connect to our NodeJS conversion server for handling of CAD files. 
 
 
