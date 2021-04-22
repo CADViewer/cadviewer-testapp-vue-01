@@ -349,7 +349,7 @@ export default {
 
 		// Standard NodeJS Server
 		var ServerBackEndUrl = "http://127.0.0.1:3000/";
-		var ServerLocation = "c:/nodejs/cadviewerServer/";
+		var ServerLocation = "c:/nodejs/cadviewer-conversion-server/";
 
 		var ServerUrl = "http://localhost:8080/";
 
