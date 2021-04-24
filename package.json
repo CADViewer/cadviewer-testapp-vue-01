@@ -8,7 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "cadviewer": "^6.4.38",
+    "cadviewer": "^6.4.47",
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
