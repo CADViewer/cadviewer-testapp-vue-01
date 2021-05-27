@@ -12,12 +12,9 @@
 import jQuery from 'jquery';
 import cadviewer from 'cadviewer';
 
-
 import {eventBus} from "../main.js";
 
-
 var textLayer1; 
-
 
 var  selected_handles = [];
 var  handle_selector = false;
@@ -374,7 +371,7 @@ export default {
       //cadviewer.cvjs_setHandlers_FrontEnd('Servlets', 'ReactJS','floorPlan');
 
 
-          cadviewer.cvjs_setHandlers_FrontEnd('NodeJS', 'VueJS','floorPlan');   // user controlled back-end
+		cadviewer.cvjs_setHandlers_FrontEnd('NodeJS', 'VueJS','floorPlan');   // user controlled back-end
 
 
 
