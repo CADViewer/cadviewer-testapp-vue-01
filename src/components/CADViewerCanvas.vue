@@ -350,6 +350,12 @@ export default {
 
 		var ServerUrl = "http://localhost:8080/";
 
+
+
+//		var ServerBackEndUrl = "https://onlinedemo.cadviewer.com/cadviewer_6_5/";
+//		var ServerLocation = "/home/cadviewer/onlinedemo.cadviewer.com/cadviewer_6_5/";
+
+
 		
 		//var FileName = ServerBackEndUrl+ "/content/drawings/dwg/LUXR-42-01-PID-005_0-Model.pdf";
 		//var FileName = ServerBackEndUrl + "/content/drawings/dwg/BRA_Alta Vila_02_CkIn_06082020.dwg";	
@@ -369,11 +375,9 @@ export default {
       //cadviewer.cvjs_setHandlers_FrontEnd('PHP', 'ReactJS','floorPlan');
       //cadviewer.cvjs_setHandlers_FrontEnd('dotNET', 'ReactJS','floorPlan');
       //cadviewer.cvjs_setHandlers_FrontEnd('Servlets', 'ReactJS','floorPlan');
-
+//cadviewer.cvjs_setHandlers_FrontEnd('PHP', 'VueJS','floorPlan');   // user controlled back-end
 
 		cadviewer.cvjs_setHandlers_FrontEnd('NodeJS', 'VueJS','floorPlan');   // user controlled back-end
-
-
 
 		// PATH and FILE to be loaded, can be in formats DWG, DXF, DWF, SVG , JS, DGN, PCF, JPG, GIF, PNG
 		  //var FileName = ServerBackEndUrl+ "/content/drawings/dwg/hq17_.dwg";		
