@@ -1,3 +1,63 @@
+# cadviewer-testapp-vue-01
+
+The repository contains a CADViewer sample implementation on VueJS.
+
+
+## This package contains
+
+1: CADViewer script library  - installed as npm in node_module structure
+
+2: Sample implementation .vue files of for running CADViewer canvas, marked 
+
+and
+
+3: CADViewer script library - standard class library installed under /public/cadviewer_toplevel_vue/ 
+
+4: Sample implementation .vue files for running standard CADViewer, these files are market (_no_npm.vue) in /src/components/ folder.
+
+
+
+## This package does not contain
+
+5: The back-end CAD Converter structure must be installed separately, and linked in by setting the back-end server variable  ***var ServerBackEndUrl = "http://127.0.0.1:3000/";*** to the url of the back-end, found in /src/components/CADViewerCanvas.vue or /src/components/CADViewerCanvas_no_npm.vue .
+
+The sample is tested using the CADViewer NodeJS Server, that can be downloaded from: https://github.com/CADViewer/cadviewer-conversion-server
+
+
+
+## How to Use
+
+Once installed, also install a suitable back-end conversion server such as CADViewer NodeJS server. 
+
+
+
+
+
+
+## General Documentation 
+
+-   [CADViewer Techdocs and Installation Guide](https://cadviewer.com/cadviewertechdocs/download)
+
+
+
+## Updating CAD Converters
+
+This repository should contain the latest converters, but in case you need to update any of the back-end converters please follow: 
+
+* [Download **AutoXchange**](/download/) (and other converters), install (unzip) AX2020 in **cadviewer/converters/ax2020/windows** or **cadviewer/converters/ax2020/linux** or in the designated folder structure.
+
+* Read the sections on installing and handling [Fonts](https://tailormade.com/ax2020techdocs/installation/fonts/) in [AutoXchange 2020 TechDocs](https://tailormade.com/ax2020techdocs/) and [TroubleShooting](https://tailormade.com/ax2020techdocs/troubleshooting/).
+
+* Try out the samples and build your own application!
+ 
+
+
+
+
+
+
+
+
 # Installing CADViewer
 
 ## CADViewer for ReactJS, Angular and VueJS
