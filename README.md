@@ -19,7 +19,7 @@ and
 
 ## This package does not contain
 
-5: The back-end CAD Converter structure must be installed separately, and linked in by setting the back-end server variable  ***var ServerBackEndUrl = "http://127.0.0.1:3000/";*** to the url of the back-end, found in /src/components/CADViewerCanvas.vue or /src/components/CADViewerCanvas_no_npm.vue .
+5: The back-end CAD Converter structure must be installed separately, and linked in by setting the back-end server variable  ***var ServerBackEndUrl = "myUrl";*** to the url of the back-end, found in /src/components/CADViewerCanvas.vue or /src/components/CADViewerCanvas_no_npm.vue .
 
 The sample is tested using the CADViewer NodeJS CAD Server, that can be downloaded from: https://github.com/CADViewer/cadviewer-conversion-server
 
