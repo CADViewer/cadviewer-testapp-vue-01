@@ -41,7 +41,7 @@ The ***ServerUrl*** is the URL of the front-end, using the sample as is, it will
 
 C: Run the sample from within /cadviewer-testapp-vue-01, with the command
 
-**npm run serve**
+	**npm run serve**
 
 It will then open on the Url listed:
 
