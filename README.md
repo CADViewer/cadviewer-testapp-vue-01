@@ -27,7 +27,7 @@ The sample **cadviewer-testapp-vue-01** is tested using the CADViewer NodeJS CAD
 
 ## How to Use
 
-Once installed, you must also install a suitable back-end conversion server such as CADViewer NodeJS server, see above.
+Once installed, you must also install a suitable back-end Conversion server such as CADViewer NodeJS CAD Server, download from: https://github.com/CADViewer/cadviewer-conversion-server.
 
 A: If running CADViewer as top level script library, the script declarations in /public/index.html must be uncommented, if running as npm install keep as is.
 
