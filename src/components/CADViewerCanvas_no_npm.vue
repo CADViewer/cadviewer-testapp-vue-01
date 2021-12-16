@@ -349,8 +349,19 @@ export default {
 		var ServerBackEndUrl = "http://127.0.0.1:3000/";
 		var ServerLocation = "c:/nodejs/cadviewer-conversion-server/";
 
+		// PHP Apache under Linux
+//		var ServerBackEndUrl = "http://localhost/cadviewer/";
+//		var ServerLocation = "/var/www/html/cadviewer/";
+
+
+
 		var ServerUrl = "http://localhost:8080/";
 
+		
+		
+		
+		
+		
 		
 		//var FileName = ServerBackEndUrl+ "/content/drawings/dwg/LUXR-42-01-PID-005_0-Model.pdf";
 		//var FileName = ServerBackEndUrl + "/content/drawings/dwg/BRA_Alta Vila_02_CkIn_06082020.dwg";	
@@ -372,7 +383,8 @@ export default {
       //cvjs_setHandlers_FrontEnd('Servlets', 'ReactJS','floorPlan');
 
 
-		cvjs_setHandlers_FrontEnd('NodeJS', 'VueJS','floorPlan');   // user controlled back-end
+		cvjs_setHandlers_FrontEnd('NodeJS', 'VueJS','floorPlan');   // user controlled back-end   NodeJS
+//		cvjs_setHandlers_FrontEnd('PHP', 'VueJS','floorPlan');   // user controlled back-end  PHP Apache
 
 
 
