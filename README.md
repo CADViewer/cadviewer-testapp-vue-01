@@ -37,7 +37,7 @@ B: In the files /src/components/CADViewerCanvas.vue and /src/components/CADViewe
 		var ServerLocation = "c:/nodejs/cadviewer-conversion-server/";
 		var ServerUrl = "http://localhost:8080/";
 
-The ***ServerUrl*** is the URL of the front-end, using the sample as is, it will spin up under localhost:8080.  The ServerLocation and ServerBackEndUrl are the Url and location of the back-end server. The ServerLocation can be masked at a later time. 
+The ***ServerUrl*** is the URL of the front-end, using the sample as is, it will spin up under localhost:8080.  The ServerLocation and ServerBackEndUrl are the Url and location of the back-end server. The ServerLocation can be masked at a later time. The **ServerUrl** will remain unchanged, the **ServerBackEndUrl** and **ServerLocation** will change depending on installation location of the back-end CAD Conversion server. 
 
 C: Run the sample from within /cadviewer-testapp-vue-01, with the command
 
@@ -51,7 +51,9 @@ App running at:
 
   Note that the development build is not optimized.
   To create a production build, run npm run build.
-
+  
+  
+D: Open the web-browser developer console. It will provide a debug trace for CADViewer and it's server communication.  Depending on conversion server installation, there are server-side debug traces available also. 
 
 
 ## General Documentation 
