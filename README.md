@@ -65,9 +65,14 @@ D: Open the web-browser developer console. It will provide a debug trace for CAD
  
 
 
+
 # General install descriptions for Installing CADViewer on Frameworks
 
-This is the general documentation for installing CADViewer within the frameworks. This documentation below can be used when building a sample. The documentation below can also be useful when porting the above sample into an application. 
+This is the general documentation for installing CADViewer within the frameworks. This documentation below can be used when integrating directly. The documentation below can also be useful when porting the ***cadviewer-testapp-vue-01*** sample into an application. 
+
+
+
+
 
 
 ## CADViewer for ReactJS, Angular and VueJS
