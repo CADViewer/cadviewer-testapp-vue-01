@@ -45,12 +45,12 @@ C: Run the sample from within /cadviewer-testapp-vue-01, with the command
 
 It will then open on the Url listed:
 
-App running at:
-  - Local:   http://localhost:8080/
-  - Network: http://172.26.12.117:8080/
+		App running at:
+		  - Local:   http://localhost:8080/
+		  - Network: http://172.26.12.117:8080/
 
-  Note that the development build is not optimized.
-  To create a production build, run npm run build.
+		  Note that the development build is not optimized.
+		  To create a production build, run npm run build.
   
   
 D: Open the web-browser developer console. It will provide a debug trace for CADViewer and it's server communication.  Depending on conversion server installation, there are server-side debug traces available also. 
