@@ -29,6 +29,9 @@ The sample **cadviewer-testapp-vue-01** is tested using the CADViewer NodeJS CAD
 
 Once installed, you must also install a suitable back-end Conversion server such as CADViewer NodeJS CAD Server, download from: https://github.com/CADViewer/cadviewer-conversion-server.
 
+An alternative server can be the PHP based Conversion Server, download from: https://github.com/CADViewer/cadviewer-script-library-php-linux , this VueJS sample will use the scrips, converters and content parts of the installation.  
+
+
 A: If running CADViewer as top level script library, the script declarations in /public/index.html must be uncommented, if running as npm install keep as is.
 
 B: In the files /src/components/CADViewerCanvas.vue and /src/components/CADViewerCanvas_no_npm.vue depending on set-up, locate the variables: 
@@ -37,7 +40,30 @@ B: In the files /src/components/CADViewerCanvas.vue and /src/components/CADViewe
 	var ServerLocation = "c:/nodejs/cadviewer-conversion-server/";
 	var ServerUrl = "http://localhost:8080/";
 
-The ***ServerUrl*** is the URL of the front-end, using the sample as is, it will spin up under localhost:8080.  The ServerLocation and ServerBackEndUrl are the Url and location of the back-end server. The ServerLocation can be masked at a later time. The **ServerUrl** will remain unchanged if running this sample, the **ServerBackEndUrl** and **ServerLocation** will change depending on installation location of the back-end CAD Conversion server. 
+The ***ServerUrl*** is the URL of the front-end, using the sample as is, it will spin up under localhost:8080.  
+
+The ServerLocation and ServerBackEndUrl are the Url and location of the back-end server. The ServerLocation can be masked at a later time. The **ServerUrl** will remain unchanged if running this sample, the **ServerBackEndUrl** and **ServerLocation** will change depending on installation location of the back-end CAD Conversion server. 
+
+Also note that the Front-End/Back-End combination must be set through a CADViewer API call cvjs_setHandlers_FrontEnd() also found in /src/components/CADViewerCanvas.vue and /src/components/CADViewerCanvas_no_npm.vue depending on set-up.
+
+For the NodeJS CAD Conversion Server, sample settings are: 
+
+	var ServerBackEndUrl = "http://127.0.0.1:3000/";
+	var ServerLocation = "c:/nodejs/cadviewer-conversion-server/";
+	var ServerUrl = "http://localhost:8080/";
+
+	cadviewer.cvjs_setHandlers_FrontEnd('NodeJS', 'VueJS','floorPlan');
+
+For the PHP CAD Conversion Server under Apache, sample settings are: 
+
+	var ServerBackEndUrl = "http://localhost/cadviewer/";
+	var ServerLocation = "/var/www/html/cadviewer/";
+	var ServerUrl = "http://localhost:8080/";
+
+	cadviewer.cvjs_setHandlers_FrontEnd('PHP', 'VueJS','floorPlan');
+
+
+
 
 C: Run the sample from within /cadviewer-testapp-vue-01, with the command
 
