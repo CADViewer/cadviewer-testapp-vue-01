@@ -346,41 +346,36 @@ export default {
 
 		// Standard NodeJS Server
 		var ServerBackEndUrl = "http://127.0.0.1:3000/";
-		var ServerLocation = "c:/nodejs/cadviewer-conversion-server/";
+		var ServerLocation = "";
 
 
-		// PHP Apache under Linux
+		// PHP Apache under Linux/Windows
 //		var ServerBackEndUrl = "http://localhost/cadviewer/";
-//		var ServerLocation = "/var/www/html/cadviewer/";
+//		var ServerLocation = "";
 
-
-		var ServerUrl = "http://localhost:8080/";
+		// THIS IS THE FRONT-END SERVER
+		var ServerUrl = "http://localhost:8080/";     // this is running under 8080 or 8081
 		
-		//var FileName = ServerBackEndUrl+ "/content/drawings/dwg/LUXR-42-01-PID-005_0-Model.pdf";
-		//var FileName = ServerBackEndUrl + "/content/drawings/dwg/BRA_Alta Vila_02_CkIn_06082020.dwg";	
-		//var FileName = ServerBackEndUrl+ "/content/drawings/dwg/LUXR-42-01-PID-005_0-Model.pdf";
-		//var FileName = ServerBackEndUrl+ "/content/drawings/dwg/hq17_2spaces.dwg";
+
+		// PATH and FILE to be loaded, can be in formats DWG, DXF, DWF, SVG , JS, DGN, PCF, JPG, GIF, PNG
 		var FileName = ServerBackEndUrl+ "/content/drawings/dwg/hq17_.dwg";
 
+
 		cadviewer.cvjs_debugMode(true);
-		cadviewer.cvjs_setServerLocationURL(ServerLocation, ServerUrl);
-		cadviewer.cvjs_setServerBackEndUrl(ServerBackEndUrl);
-		//cadviewer.cvjs_setHandlerSettings('NodeJS', 'floorPlan'); // standard angular + nodejs
+		cadviewer.cvjs_setAllServerURLsLocation(ServerBackEndUrl, ServerUrl, ServerLocation);   // note!!
 
 
 		cadviewer.cvjs_setHandlers_FrontEnd('NodeJS', 'VueJS','floorPlan');      // NodeJS server
-//   cadviewer.cvjs_setHandlers_FrontEnd('PHP', 'ReactJS','floorPlan');  // PHP server
+//	  cadviewer.cvjs_setHandlers_FrontEnd('PHP', 'VueJS','floorPlan');   // user controlled back-end
 
 
       // USER Controlled - 
+   //   cadviewer.cvjs_setHandlers_FrontEnd('PHP', 'ReactJS','floorPlan');  // PHP server
       //cadviewer.cvjs_setHandlers_FrontEnd('NodeJS', 'JavaScript','floorPlan');   // user controlled back-end
       //cadviewer.cvjs_setHandlers_FrontEnd('dotNET', 'ReactJS','floorPlan');
       //cadviewer.cvjs_setHandlers_FrontEnd('Servlets', 'ReactJS','floorPlan');
-	   //cadviewer.cvjs_setHandlers_FrontEnd('PHP', 'VueJS','floorPlan');   // user controlled back-end
 	  //cadviewer.cvjs_setHandlers_FrontEnd('NodeJS', 'VueJS','floorPlan');   // user controlled back-end
 
-		// PATH and FILE to be loaded, can be in formats DWG, DXF, DWF, SVG , JS, DGN, PCF, JPG, GIF, PNG
-		  //var FileName = ServerBackEndUrl+ "/content/drawings/dwg/hq17_.dwg";		
 		   
         //      Setting all callback methods  - they have to be injected into the CADViewer class componnet
         cadviewer.cvjs_setCallbackMethod("cvjs_OnLoadEnd", cvjs_OnLoadEnd);
@@ -521,7 +516,7 @@ export default {
 		// NOTE BELOW: THESE SETTINGS ARE FOR SERVER CONTROLS FOR UPLOAD OF REDLINES
 
 		// NOTE BELOW: THESE SETTINGS ARE FOR SERVER CONTROLS FOR UPLOAD OF REDLINES, FILES, SPACE OBJECTS
-		cadviewer.cvjs_setServerFileLocation_AbsolutePaths(ServerLocation+'/content/drawings/dwg/', ServerUrl+'content/drawings/dwg/',"","");
+		cadviewer.cvjs_setServerFileLocation_AbsolutePaths(ServerLocation+'/content/drawings/dwg/', ServerBackEndUrl+'content/drawings/dwg/',"","");
 		cadviewer.cvjs_setRedlinesAbsolutePath(ServerBackEndUrl+'/content/redlines/fileloader_610/', ServerLocation+'/content/redlines/fileloader_610/');
 		cadviewer.cvjs_setSpaceObjectsAbsolutePath(ServerBackEndUrl+'/content/spaceObjects/', ServerLocation+'/content/spaceObjects/');
 		cadviewer.cvjs_setInsertImageObjectsAbsolutePath(ServerBackEndUrl+'/content/inserted_image_objects/', ServerLocation+'/content/inserted_image_objects/')
