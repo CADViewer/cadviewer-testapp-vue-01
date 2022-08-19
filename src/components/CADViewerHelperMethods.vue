@@ -874,6 +874,8 @@ console.log("REMOVE: generic_dblclick_method_01: x="+x+" y="+y+" svg_x="+svg_x+"
 
 
 
+var ServerBackEndUrl = "http://localhost:3000/";
+
 /////////  CANVAS CONTROL METHODS END
 
 
@@ -930,9 +932,10 @@ export default {
 
     },
 
+
 		insert_from_type_id_image(){
 
-			var loadSpaceImage_Location = "/cadviewer/content/drawings/svg/" + jQuery('#image_sensor_location').val();
+			var loadSpaceImage_Location = ServerBackEndUrl+"/content/drawings/svg/" + jQuery('#image_sensor_location').val();
 			var loadSpaceImage_ID = jQuery('#image_ID').val();
 			var loadSpaceImage_Type = jQuery('#image_Type').val();
 			var loadSpaceImage_Layer = "cvjs_SpaceLayer";

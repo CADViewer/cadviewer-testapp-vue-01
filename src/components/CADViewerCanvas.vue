@@ -362,19 +362,15 @@ export default {
 
 
 		cadviewer.cvjs_debugMode(true);
-		cadviewer.cvjs_setAllServerURLsLocation(ServerBackEndUrl, ServerUrl, ServerLocation);   // note!!
 
 
-		cadviewer.cvjs_setHandlers_FrontEnd('NodeJS', 'VueJS','floorPlan');      // NodeJS server
+		// Set all paths, and handlers, changes these depending on back-end server
+		cadviewer.cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "NodeJS", "ReactJS", "floorPlan");
+
+//		cadviewer.cvjs_setAllServerURLsLocation(ServerBackEndUrl, ServerUrl, ServerLocation);   // note!!
+//		cadviewer.cvjs_setHandlers_FrontEnd('NodeJS', 'VueJS','floorPlan');      // NodeJS server
 //	  cadviewer.cvjs_setHandlers_FrontEnd('PHP', 'VueJS','floorPlan');   // user controlled back-end
 
-
-      // USER Controlled - 
-   //   cadviewer.cvjs_setHandlers_FrontEnd('PHP', 'ReactJS','floorPlan');  // PHP server
-      //cadviewer.cvjs_setHandlers_FrontEnd('NodeJS', 'JavaScript','floorPlan');   // user controlled back-end
-      //cadviewer.cvjs_setHandlers_FrontEnd('dotNET', 'ReactJS','floorPlan');
-      //cadviewer.cvjs_setHandlers_FrontEnd('Servlets', 'ReactJS','floorPlan');
-	  //cadviewer.cvjs_setHandlers_FrontEnd('NodeJS', 'VueJS','floorPlan');   // user controlled back-end
 
 		   
         //      Setting all callback methods  - they have to be injected into the CADViewer class componnet
@@ -440,6 +436,16 @@ export default {
 
 		// Available languages:  "English" ; "French, "Korean", "Spanish", "Portuguese", "Chinese-Simplified", "Chinese-Traditional"
 
+
+
+		 cadviewer.cvjs_DisplayCoordinatesMenu("floorPlan",true);
+
+		// 6.9.18
+		// set SpaceObjectsCustomMenu location and json config file,  flag true to display SpaceObject Menu, false to hide
+		cadviewer.cvjs_setSpaceObjectsCustomMenu( "/content/customInsertSpaceObjectMenu/", "cadviewercustomspacecommands.json", true);
+
+
+
 		// Set Icon Menu Interface controls. Users can: 
 		// 1: Disable all icon interfaces
 		//  cvjs_displayAllInterfaceControls(false, "floorPlan");  // disable all icons for user control of interface
@@ -499,14 +505,12 @@ export default {
 		// set the location to license key, typically the js folder in main app application folder ../app/cv/
 		//cadviewer.cvjs_setLicenseKeyPath("/cadviewer/app/cv/");
 		// alternatively, set the key directly, by pasting in the cvKey portion of the cvlicense.js file, note the JSON \" around all entities 	 
-		cadviewer.cvjs_setLicenseKeyDirect('{ \"cvKey\": \"00110010 00110010 00110000 00110010 00110010 00110000 00110010 00110001 00110100 00111000 00110001 00110100 00110101 00110001 00110101 00110111 00110001 00110101 00111001 00110001 00110100 00111000 00110001 00110101 00110010 00110001 00110100 00110101 00110001 00110100 00110001 00110001 00110100 00110000 00110001 00111001 00111000 00110010 00110000 00110110 00110010 00110000 00111000 00110010 00110000 00110110 00110010 00110000 00110111 00110010 00110001 00110001 00110010 00110000 00111000 00110010 00110000 00110011 00110010 00110001 00110001 00110010 00110000 00110101 00110010 00110000 00111000 \" }');		 
+		cadviewer.cvjs_setLicenseKeyDirect('{ \"cvKey\": \"00110010 00110010 00110000 00110001 00110010 00110000 00110100 00110001 00110100 00111000 00110001 00110100 00110101 00110001 00110101 00110111 00110001 00110101 00111001 00110001 00110100 00111000 00110001 00110101 00110010 00110001 00110100 00110101 00110001 00110100 00110001 00110001 00110100 00110000 00110001 00111001 00110111 00110010 00110000 00110111 00110010 00110000 00110110 00110010 00110000 00110001 00110010 00110001 00110000 00110010 00110000 00111000 00110010 00110001 00110000 00110010 00110000 00111000 00110010 00110001 00110000 00110010 00110000 00110111 00110001 00111001 00111000 00110010 00110000 00110110 00110010 00110000 00111000 00110010 00110000 00110110 00110010 00110000 00110101 00110010 00110001 00110001 00110010 00110000 00111000 00110010 00110000 00110111 00110010 00110001 00110001 00110010 00110000 00110101 00110010 00110000 00110111 00110001 00111001 00111000 00110001 00110100 00110001 00110001 00110100 00110100 00110001 00110101 00111001 00110001 00110101 00110111 00110001 00110101 00110101 \" }');		 
 			
 		// Sets the icon interface for viewing, layerhanding, measurement, etc. only
 		//cvjs_setIconInterfaceControls_ViewingOnly();
-
 		// disable canvas interface.  For developers building their own interface
 		// cvjs_setIconInterfaceControls_DisableIcons(true);
-
 
 		cadviewer.cvjs_allowFileLoadToServer(true);
 		
@@ -523,22 +527,20 @@ export default {
 
 			
 		cadviewer.cvjs_conversion_clearAXconversionParameters();
-	//			 cadviewer.cvjs_conversion_addAXconversionParameter("lw", "0.3");		 
-	//			 cadviewer.cvjs_conversion_addAXconversionParameter("lwmin", "0.3");		 
 
-	// process layers for spaces  RL/TL
+		// process layers for spaces  RL/TL
 		cadviewer.cvjs_conversion_addAXconversionParameter("RL", "RM_");		 
 		cadviewer.cvjs_conversion_addAXconversionParameter("TL", "RM_TXT");		 
 		// calculate areas of spaces
 		cadviewer.cvjs_conversion_addAXconversionParameter("LA", "");		 
-
-		//      cvjs_conversion_addAXconversionParameter("RL", "EC1 Space Polygons");		 
-	//      cvjs_conversion_addAXconversionParameter("TL", "EC1 Space Numbers");		 
-
-		cadviewer.cvjs_conversion_addAXconversionParameter("last", "");		 
-		cadviewer.cvjs_conversion_addAXconversionParameter("fpath", ServerLocation + "/converters/ax2020/windows/fonts/");		 
-							
+		cadviewer.cvjs_conversion_addAXconversionParameter("last", "");		 							
 		// NOTE ABOVE: THESE SETTINGS ARE FOR SERVER CONTROLS FOR CONVERTING DWG, DXF, DWF files
+
+
+		// FOR MEASUREMENT ENABLE HANDLE PROCESSING
+	    cadviewer.cvjs_conversion_addAXconversionParameter("hlall", "");		 							
+
+
 
 		// Load file - needs the svg div name and name and path of file to load
 		cadviewer.cvjs_LoadDrawing("floorPlan", FileName );
@@ -575,8 +577,8 @@ export default {
 
 #floorPlan {
 	text-align: left;
-	margin-top: 10px;
-  	margin-left: 50px;
+	margin-top: 30px;
+  	margin-left: 2px;   /* margin-left: 50px;   */
 } 
  
 

@@ -19,7 +19,8 @@ import HelloWorld from './components/HelloWorld.vue'
 // Standard use
 import CADViewerCanvas from './components/CADViewerCanvas.vue'    // STANDARD NPM INSTALL
 import CADViewerHelperMethods from './components/CADViewerHelperMethods.vue' // STANDARD NPM INSTALL
-import CADViewerSpaceObjects from './components/CADViewerSpaceObjects.vue' // STANDARD NPM INSTALL
+//import CADViewerSpaceObjects from './components/CADViewerSpaceObjects.vue' // STANDARD NPM INSTALL
+
 
 // Altenative use, see index.html for import of CADViewer and jQuery
 /*
@@ -33,7 +34,7 @@ export default {
   components: {
     'app-helloworld': HelloWorld,
     'app-cadviewerhelpermethods' : CADViewerHelperMethods,
-    'app-cadviewerspaceobjects' : CADViewerSpaceObjects,
+/*    'app-cadviewerspaceobjects' : CADViewerSpaceObjects, */
     'app-cadviewercanvas': CADViewerCanvas,
   }
 }
