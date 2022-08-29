@@ -207,16 +207,23 @@ function cvjs_mousedown(id, handle, entity){
 function cvjs_click(id, handle, entity){
 
 
-  console.log("mysql click "+id+"  "+handle);
-  // if we click on an object, then we add to the handle list
-  if (handle_selector){
-      selected_handles.push({id,handle});
-      current_selected_handle = handle;
-  }
+	try{
+		console.log("click "+id+"  "+handle);
+		// if we click on an object, then we add to the handle list
+		if (id!="dragcanvas")
+			if (handle_selector){
+				selected_handles.push({id,handle});
+				current_selected_handle = handle;
+			}
 
-// tell to update the Scroll bar 
-//vqUpdateScrollbar(id, handle);
-// window.alert("We have clicked an entity: "+entity.substring(4)+"\r\nThe AutoCAD Handle id: "+handle+"\r\nThe svg id is: "+id+"\r\nHighlight SQL pane entry");
+		// tell to update the Scroll bar 
+		//vqUpdateScrollbar(id, handle);
+		// window.alert("We have clicked an entity: "+entity.substring(4)+"\r\nThe AutoCAD Handle id: "+handle+"\r\nThe svg id is: "+id+"\r\nHighlight SQL pane entry");
+	}
+	catch(err){
+		console.log("click: "+err);
+	}
+
 }
 
 function cvjs_dblclick(id, handle, entity){
@@ -239,13 +246,13 @@ function cvjs_mouseout(id, handle, entity){
 
 function cvjs_mouseover(id, handle, entity){
 
-console.log("mysql mouseover "+id+"  "+handle+"  "+jQuery("#"+id).css("color"))
+console.log("mysql mouseover "+id+"  "+handle); // +"  "+jQuery("#"+id).css("color"))
 //cvjs_mouseover_handleObjectPopUp(id, handle);	
 }
 
 function cvjs_mouseleave(id, handle, entity){
 
-console.log("mysql mouseleave "+id+"  "+handle+"  "+jQuery("#"+id).css("color"));
+console.log("mysql mouseleave "+id+"  "+handle); // +"  "+jQuery("#"+id).css("color"));
 }
 
 
@@ -345,7 +352,7 @@ export default {
     console.log('mounted');
 
 		// Standard NodeJS Server
-		var ServerBackEndUrl = "http://127.0.0.1:3000/";
+		var ServerBackEndUrl = "http://localhost:3000/";
 		var ServerLocation = "";
 
 
