@@ -205,7 +205,7 @@ Read the Guide on how to **[modify hotspots](https://cadviewer.com/highlight2/ma
 
 Read the general documentation on **CADViewer** is found at: https://cadviewer.com/cadviewertechdocs/.
 
-The general documentation on **AutoXchange 2022** is found at: https://tailormade.com/ax2020techdocs/.
+The general documentation on **AutoXchange 2023** is found at: https://tailormade.com/ax2020techdocs/.
 
 The CADViewer API is found at: https://cadviewer.com/cadviewerproapi/global.html.
 
