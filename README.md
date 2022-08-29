@@ -36,8 +36,8 @@ A: If running CADViewer as top level script library, the script declarations in 
 
 B: In the files /src/components/CADViewerCanvas.vue and /src/components/CADViewerCanvas_no_npm.vue depending on set-up, locate the variables: 
 
-	var ServerBackEndUrl = "http://127.0.0.1:3000/";
-	var ServerLocation = "c:/nodejs/cadviewer-conversion-server/";
+	var ServerBackEndUrl = "http://localhost:3000/";
+	var ServerLocation = "";
 	var ServerUrl = "http://localhost:8080/";
 
 The ***ServerUrl*** is the URL of the front-end, using the sample as is, it will spin up under localhost:8080.  
@@ -49,7 +49,7 @@ Also note that the Front-End/Back-End combination must be set through a CADViewe
 For the NodeJS CAD Conversion Server with npm library, sample settings are: 
 
 	var ServerBackEndUrl = "http://127.0.0.1:3000/";
-	var ServerLocation = "c:/nodejs/cadviewer-conversion-server/";
+	var ServerLocation = "";
 	var ServerUrl = "http://localhost:8080/";
 
 	cadviewer.cvjs_setHandlers_FrontEnd('NodeJS', 'VueJS','floorPlan');
@@ -57,7 +57,7 @@ For the NodeJS CAD Conversion Server with npm library, sample settings are:
 For the PHP CAD Conversion Server under Apache with npm library, sample settings are: 
 
 	var ServerBackEndUrl = "http://localhost/cadviewer/";
-	var ServerLocation = "/var/www/html/cadviewer/";
+	var ServerLocation = "";
 	var ServerUrl = "http://localhost:8080/";
 
 	cadviewer.cvjs_setHandlers_FrontEnd('PHP', 'VueJS','floorPlan');
@@ -205,7 +205,7 @@ Read the Guide on how to **[modify hotspots](https://cadviewer.com/highlight2/ma
 
 Read the general documentation on **CADViewer** is found at: https://cadviewer.com/cadviewertechdocs/.
 
-The general documentation on **AutoXchange 2022** is found at: https://tailormade.com/ax2020techdocs/.
+The general documentation on **AutoXchange 2023** is found at: https://tailormade.com/ax2020techdocs/.
 
 The CADViewer API is found at: https://cadviewer.com/cadviewerproapi/global.html.
 
