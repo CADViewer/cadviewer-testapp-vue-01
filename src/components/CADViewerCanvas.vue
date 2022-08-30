@@ -439,9 +439,10 @@ export default {
 		cadviewer.cvjs_emailSettings_PDF_publish("From CAD Server", "my_from_address@mydomain.com", "my_cc_address@mydomain.com", "my_reply_to@mydomain.com");
 		   	 
 		// CHANGE LANGUAGE - DEFAULT IS ENGLISH	
-		cadviewer.cvjs_loadCADViewerLanguage("English"); //cadviewer.cvjs_loadCADViewerLanguage("English", "/app/cv/cv-pro/language_table/cadviewerProLanguage.xml");
-
+		cadviewer.cvjs_loadCADViewerLanguage("English", ""); 
 		// Available languages:  "English" ; "French, "Korean", "Spanish", "Portuguese", "Chinese-Simplified", "Chinese-Traditional"
+		//cadviewer.cvjs_loadCADViewerLanguage("English", "/cadviewer/app/cv/cv-pro/custom_language_table/custom_cadviewerProLanguage.xml");
+
 
 
 
