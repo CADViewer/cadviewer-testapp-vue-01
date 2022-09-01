@@ -370,6 +370,8 @@ export default {
 
 		cadviewer.cvjs_debugMode(true);
 
+		cadviewer.cvjs_setIconImageSize("floorPlan",34, 44);
+
 
 		// Set all paths, and handlers, changes these depending on back-end server
 		cadviewer.cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "NodeJS", "ReactJS", "floorPlan");
