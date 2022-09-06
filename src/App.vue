@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png" width="40px">
     <app-helloworld msg="Welcome to Your Vue.js App"></app-helloworld>
     <app-cadviewerhelpermethods ref="cadviewerhelpermethods"></app-cadviewerhelpermethods>
-    <app-cadviewerspaceobjects ref="cadviewerspaceobjects"></app-cadviewerspaceobjects>
+    <!--<app-cadviewerspaceobjects ref="cadviewerspaceobjects"></app-cadviewerspaceobjects> -->
     <app-cadviewercanvas ref="cadviewercanvas"></app-cadviewercanvas>
 
     
