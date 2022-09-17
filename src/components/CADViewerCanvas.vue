@@ -360,13 +360,13 @@ export default {
 //		var ServerBackEndUrl = "http://localhost/cadviewer/";
 //		var ServerLocation = "";
 
+
 		// THIS IS THE FRONT-END SERVER
 		var ServerUrl = "http://localhost:8080/";     // this is running under 8080 or 8081
 		
 
 		// PATH and FILE to be loaded, can be in formats DWG, DXF, DWF, SVG , JS, DGN, PCF, JPG, GIF, PNG
 		var FileName = ServerBackEndUrl+ "/content/drawings/dwg/hq17_.dwg";
-
 
 		cadviewer.cvjs_debugMode(true);
 
@@ -376,9 +376,7 @@ export default {
 		// Set all paths, and handlers, changes these depending on back-end server
 		cadviewer.cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "NodeJS", "ReactJS", "floorPlan");
 
-//		cadviewer.cvjs_setAllServerURLsLocation(ServerBackEndUrl, ServerUrl, ServerLocation);   // note!!
-//		cadviewer.cvjs_setHandlers_FrontEnd('NodeJS', 'VueJS','floorPlan');      // NodeJS server
-//	  cadviewer.cvjs_setHandlers_FrontEnd('PHP', 'VueJS','floorPlan');   // user controlled back-end
+//		cadviewer.cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "PHP", "ReactJS", "floorPlan");
 
 
 		   
