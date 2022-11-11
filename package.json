@@ -1,6 +1,6 @@
 {
   "name": "cadviewer-testapp-vue-01",
-  "version": "7.6.18",
+  "version": "7.6.24",
   "description": "CADViewer - JavaScript CAD Viewer sample implementation for VueJS",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -8,7 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "cadviewer": "^7.6.18",
+    "cadviewer": "^7.6.24",
     "core-js": "^3.25.0",
     "popper.js": "^1.16.1",
     "vue": "^2.7.10",
