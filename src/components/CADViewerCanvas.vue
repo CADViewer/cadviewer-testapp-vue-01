@@ -358,7 +358,7 @@ export default {
 
 		// PHP Apache under Linux/Windows
 		//var ServerBackEndUrl = "http://localhost/cadviewer/";
-		var ServerLocation = "";
+		//var ServerLocation = "/xampp/htdocs/cadviewer/";
 
 
 		// THIS IS THE FRONT-END SERVER
