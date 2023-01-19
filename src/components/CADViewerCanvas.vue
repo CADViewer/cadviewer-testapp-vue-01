@@ -374,7 +374,7 @@ export default {
 
 
 		// Set all paths, and handlers, changes these depending on back-end server
-		cadviewer.cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "NodeJS", "ReactJS", "floorPlan");
+		cadviewer.cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "NodeJS", "VueJS", "floorPlan");
 
 //		cadviewer.cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "PHP", "ReactJS", "floorPlan");
 
@@ -460,19 +460,18 @@ export default {
 		// 2: Disable either top menu icon menus or navigation menu, or both
 
 		//cvjs_displayTopMenuIconBar(false, "floorPlan");  // disable top menu icon bar
-		//cvjs_displayTopNavigationBar(false, "floorPlan");  // disable top navigation bar
+		// cvjs_displayTopNavigationBar(false, "floorPlan");  // disable top navigation bar
 
 		// 3: Users can change the number of top menu icon pages and the content of pages, based on a configuration file in folder /cadviewer/app/js/menu_config/    		
+
+
 		cadviewer.cvjs_setTopMenuXML("floorPlan", "cadviewer_full_commands_01.xml", "");  
 
+		// cadviewer.cvjs_setTopMenuXML("floorPlan", "cadviewer_viewonly_nofileload_01.xml", "/cadviewer/app/cv/cv-pro/menu_config/"); 
 
-		// cadviewer.cvjs_setTopMenuXML("floorPlan", "cadviewer_viewonly_nofileload_01.xml", "/cadviewer/app/cv/cv-pro/menu_config/"); //, "/app/cv/cv-pro/menu_config/");
-
-
-
-		//cadviewer.cvjs_setTopMenuXML("floorPlan", "cadviewer_full_commands_01.xml", "/assets/cadviewer/app/cv/cv-pro/menu_config/");
-		//cadviewer.cvjs_setTopMenuXML("floorPlan", "cadviewer_menu_all_items_custom_commands.xml", "/assets/cadviewer/app/cv/cv-pro/menu_config/");
 		//cadviewer.cvjs_setTopMenuXML("floorPlan", "cadviewer_viewonly_nofileload_01.xml", "/cadviewer/app/cv/cv-pro/menu_config/"); //, "/app/cv/cv-pro/menu_config/");
+		//cadviewer.cvjs_setTopMenuXML("floorPlan", "cadviewer_menu_all_items_custom_commands.xml", "/assets/cadviewer/app/cv/cv-pro/menu_config/");
+		// cadviewer.cvjs_setTopMenuXML("floorPlan", "cadviewer_viewonly_usecase_chn_01.xml", "/cadviewer/app/cv/cv-pro/menu_config/"); 
 
 
 		// Initialize CADViewer  - needs the div name on the svg element on page that contains CADViewerJS and the location of the
@@ -545,15 +544,17 @@ export default {
 		cadviewer.cvjs_conversion_clearAXconversionParameters();
 
 		// process layers for spaces  RL/TL
-		cadviewer.cvjs_conversion_addAXconversionParameter("RL", "RM_");		 
-		cadviewer.cvjs_conversion_addAXconversionParameter("TL", "RM_TXT");		 
+//		cadviewer.cvjs_conversion_addAXconversionParameter("RL", "RM_");		 
+//		cadviewer.cvjs_conversion_addAXconversionParameter("TL", "RM_TXT");		 
 		// calculate areas of spaces
-		cadviewer.cvjs_conversion_addAXconversionParameter("LA", "");		 
+//		cadviewer.cvjs_conversion_addAXconversionParameter("LA", "");		 
 		cadviewer.cvjs_conversion_addAXconversionParameter("last", "");		 							
 		// NOTE ABOVE: THESE SETTINGS ARE FOR SERVER CONTROLS FOR CONVERTING DWG, DXF, DWF files
 
 
 		// FOR MEASUREMENT ENABLE HANDLE PROCESSING
+		cadviewer.cvjs_conversion_addAXconversionParameter("last", "");		 							
+		cadviewer.cvjs_conversion_addAXconversionParameter("strokea", "");		 							
 	    cadviewer.cvjs_conversion_addAXconversionParameter("hlall", "");		 							
 
 
