@@ -267,6 +267,19 @@ function cvjs_mouseenter(id, handle, entity){
 
 // END OF MOUSE OPERATION
 
+// TEST METHOD FOR EXTERNAL MODAL IN COMPARE
+
+function myhelloworldexternalmodal(parameter){
+
+	var ServerBackEndUrl = "http://localhost:3000/";
+	window.alert("myhelloworldexternalmodal:"+parameter);
+	cadviewer.cvjs_setCompareDrawings_LoadSecondDrawingDirect("floorPlan", ServerBackEndUrl+"/content/drawings/dwg/hyperlink2.dwg");
+	cadviewer.cvjs_LoadDrawing("floorPlan", ServerBackEndUrl+"/content/drawings/dwg/hyperlink2.dwg" );
+}
+
+
+
+
 function cvjs_graphicalObjectCreated(graphicalObject){
 // do something with the graphics object created!
 //		window.alert(graphicalObject);
@@ -434,6 +447,9 @@ export default {
 		 cadviewer.cvjs_PrintToPDFWindowRelativeSize(0.8);
 		 cadviewer.cvjs_setFileModalEditMode(false);
 	   		   
+		 cadviewer.cvjs_setCADViewerInterfaceVersion(8);
+
+
 		// For "Merge DWG" / "Merge PDF" commands, set up the email server to send merged DWG files or merged PDF files with redlines/interactive highlight.
 		// See php / xampp documentation on how to prepare your server
 		cadviewer.cvjs_emailSettings_PDF_publish("From CAD Server", "my_from_address@mydomain.com", "my_cc_address@mydomain.com", "my_reply_to@mydomain.com");
