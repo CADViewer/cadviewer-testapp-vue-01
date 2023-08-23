@@ -46,6 +46,7 @@ function cvjs_OnLoadEnd(){
 	textLayer1 = cadviewer.cvjs_clearLayer(textLayer1);
 	
 
+	/*  if custom layers have to be turned off after file has been loaded
 	cadviewer.cvjs_LayerOff("EC1 Space Names");
 	cadviewer.cvjs_LayerOff("EC1 Space Status Descs");
 	cadviewer.cvjs_LayerOff("EC1 Space Project");
@@ -54,7 +55,7 @@ function cvjs_OnLoadEnd(){
 	cadviewer.cvjs_LayerOff("EC1 Tenant Names");
 	cadviewer.cvjs_LayerOff("EC1 UDA Design Capacity");
 	cadviewer.cvjs_LayerOff("EC1 UDA Is Secured");
-
+	*/
 }
 
 function cvjs_OnLoadEndRedlines(){
@@ -364,32 +365,40 @@ export default {
 
     console.log('mounted');
 
-		// Standard NodeJS Server
+		
+/*
+		// Standard NodeJS Conversion Server  - github install: https://github.com/CADViewer/cadviewer-conversion-server 		
 		var ServerBackEndUrl = "http://localhost:3000/";
 		var ServerLocation = "";
+		// Set all paths, and handlers, changes these depending on back-end server
+		cadviewer.cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "NodeJS", "ReactJS", "floorPlan");
+		// END Standard NodeJS Conversion server
+*/
 
 
-		// PHP Apache under Linux/Windows
-		//var ServerBackEndUrl = "http://localhost/cadviewer/";
-		//var ServerLocation = "/xampp/htdocs/cadviewer/";
+
+		// PHP Apache Conversion Server under Linux/Windows  - github install: https://github.com/CADViewer/cadviewer-script-library
+//		var ServerBackEndUrl = "http://localhost/cadviewer/";
+		var ServerBackEndUrl = "http://34.88.15.204/cadviewer/";  // - temporary Apache Server install on Google Cloud public VM
+		var ServerLocation = "";
+		cadviewer.cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "PHP", "ReactJS", "floorPlan");
+		// END Standard PHP Apache Conversion server
+
+
+
 
 
 		// THIS IS THE FRONT-END SERVER
 		var ServerUrl = "http://localhost:8080/";     // this is running under 8080 or 8081
 		
-
 		// PATH and FILE to be loaded, can be in formats DWG, DXF, DWF, SVG , JS, DGN, PCF, JPG, GIF, PNG
 		var FileName = ServerBackEndUrl+ "/content/drawings/dwg/hq17_.dwg";
-
 		cadviewer.cvjs_debugMode(true);
-
 		cadviewer.cvjs_setIconImageSize("floorPlan",34, 44);
 
 
-		// Set all paths, and handlers, changes these depending on back-end server
-		cadviewer.cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "NodeJS", "VueJS", "floorPlan");
 
-//		cadviewer.cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "PHP", "ReactJS", "floorPlan");
+
 
 
 		   
@@ -560,18 +569,20 @@ export default {
 		cadviewer.cvjs_conversion_clearAXconversionParameters();
 
 		// process layers for spaces  RL/TL
-//		cadviewer.cvjs_conversion_addAXconversionParameter("RL", "RM_");		 
-//		cadviewer.cvjs_conversion_addAXconversionParameter("TL", "RM_TXT");		 
+		cadviewer.cvjs_conversion_addAXconversionParameter("RL", "RM_");		 
+		cadviewer.cvjs_conversion_addAXconversionParameter("TL", "RM_TXT");		 
 		// calculate areas of spaces
 //		cadviewer.cvjs_conversion_addAXconversionParameter("LA", "");		 
 		cadviewer.cvjs_conversion_addAXconversionParameter("last", "");		 							
 		// NOTE ABOVE: THESE SETTINGS ARE FOR SERVER CONTROLS FOR CONVERTING DWG, DXF, DWF files
 
 
+
+
 		// FOR MEASUREMENT ENABLE HANDLE PROCESSING
-		cadviewer.cvjs_conversion_addAXconversionParameter("last", "");		 							
-		cadviewer.cvjs_conversion_addAXconversionParameter("strokea", "");		 							
-	    cadviewer.cvjs_conversion_addAXconversionParameter("hlall", "");		 							
+//		cadviewer.cvjs_conversion_addAXconversionParameter("last", "");		 							
+//		cadviewer.cvjs_conversion_addAXconversionParameter("strokea", "");		 							
+//	    cadviewer.cvjs_conversion_addAXconversionParameter("hlall", "");		 							
 
 
 
