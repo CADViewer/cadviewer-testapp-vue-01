@@ -366,25 +366,24 @@ export default {
     console.log('mounted');
 
 		
-/*
+ ///*   //USE THIS FOR NODEJS SERVER
 		// Standard NodeJS Conversion Server  - github install: https://github.com/CADViewer/cadviewer-conversion-server 		
 		var ServerBackEndUrl = "http://localhost:3000/";
 		var ServerLocation = "";
 		// Set all paths, and handlers, changes these depending on back-end server
 		cadviewer.cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "NodeJS", "ReactJS", "floorPlan");
 		// END Standard NodeJS Conversion server
-*/
+ //*/
 
 
-
+/*	   //USE THIS FOR APACHE SERVER
 		// PHP Apache Conversion Server under Linux/Windows  - github install: https://github.com/CADViewer/cadviewer-script-library
-//		var ServerBackEndUrl = "http://localhost/cadviewer/";
-		var ServerBackEndUrl = "http://34.88.15.204/cadviewer/";  // - temporary Apache Server install on Google Cloud public VM
+		var ServerBackEndUrl = "http://localhost/cadviewer/";
+//		var ServerBackEndUrl = "http://34.88.15.204/cadviewer/";  // - temporary Apache Server install on Google Cloud public VM
 		var ServerLocation = "";
 		cadviewer.cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "PHP", "ReactJS", "floorPlan");
 		// END Standard PHP Apache Conversion server
-
-
+*/
 
 
 
