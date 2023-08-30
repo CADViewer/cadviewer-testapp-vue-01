@@ -366,24 +366,25 @@ export default {
     console.log('mounted');
 
 		
- ///*   //USE THIS FOR NODEJS SERVER
+// /*   //USE THIS FOR NODEJS SERVER
 		// Standard NodeJS Conversion Server  - github install: https://github.com/CADViewer/cadviewer-conversion-server 		
 		var ServerBackEndUrl = "http://localhost:3000/";
 		var ServerLocation = "";
 		// Set all paths, and handlers, changes these depending on back-end server
 		cadviewer.cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "NodeJS", "ReactJS", "floorPlan");
 		// END Standard NodeJS Conversion server
- //*/
+// */
 
-
-/*	   //USE THIS FOR APACHE SERVER
+/*
+	   //USE THIS FOR APACHE SERVER
 		// PHP Apache Conversion Server under Linux/Windows  - github install: https://github.com/CADViewer/cadviewer-script-library
-		var ServerBackEndUrl = "http://localhost/cadviewer/";
-//		var ServerBackEndUrl = "http://34.88.15.204/cadviewer/";  // - temporary Apache Server install on Google Cloud public VM
+//		var ServerBackEndUrl = "http://localhost/cadviewer/";
+		var ServerBackEndUrl = "http://34.88.15.204/cadviewer/";  // - temporary Apache Server install on Google Cloud public VM
 		var ServerLocation = "";
 		cadviewer.cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "PHP", "ReactJS", "floorPlan");
 		// END Standard PHP Apache Conversion server
 */
+
 
 
 
@@ -394,9 +395,6 @@ export default {
 		var FileName = ServerBackEndUrl+ "/content/drawings/dwg/hq17_.dwg";
 		cadviewer.cvjs_debugMode(true);
 		cadviewer.cvjs_setIconImageSize("floorPlan",34, 44);
-
-
-
 
 
 
@@ -471,8 +469,7 @@ export default {
 
 		 cadviewer.cvjs_DisplayCoordinatesMenu("floorPlan",true);
 
-		// 6.9.18
-		// set SpaceObjectsCustomMenu location and json config file,  flag true to display SpaceObject Menu, false to hide
+		// NOTE: set SpaceObjectsCustomMenu location and json config file,  flag true to display SpaceObject Menu, false to hide
 		cadviewer.cvjs_setSpaceObjectsCustomMenu( "/content/customInsertSpaceObjectMenu/", "cadviewercustomspacecommands.json", true);
 
 
@@ -491,9 +488,10 @@ export default {
 
 		cadviewer.cvjs_setTopMenuXML("floorPlan", "cadviewer_full_commands_01.xml", "");  
 
-		// cadviewer.cvjs_setTopMenuXML("floorPlan", "cadviewer_viewonly_nofileload_01.xml", "/cadviewer/app/cv/cv-pro/menu_config/"); 
-
-		//cadviewer.cvjs_setTopMenuXML("floorPlan", "cadviewer_viewonly_nofileload_01.xml", "/cadviewer/app/cv/cv-pro/menu_config/"); //, "/app/cv/cv-pro/menu_config/");
+// NOTE, below cvjs_setTopMenuXML is for NODEJS server, if on PHP server remove "cadviewer" from path, so /cadviewer/app/... becomes /app/...
+//		cadviewer.cvjs_setTopMenuXML("floorPlan", "cadviewer_no_loading_02.xml", "/cadviewer/app/cv/cv-pro/menu_config/");  
+//php		cadviewer.cvjs_setTopMenuXML("floorPlan", "cadviewer_viewonly_nofileload_01.xml", "/app/cv/cv-pro/menu_config/"); //, "/app/cv/cv-pro/menu_config/");
+//		cadviewer.cvjs_setTopMenuXML("floorPlan", "cadviewer_viewonly_nofileload_01.xml", "/cadviewer/app/cv/cv-pro/menu_config/"); //, "/app/cv/cv-pro/menu_config/");
 		//cadviewer.cvjs_setTopMenuXML("floorPlan", "cadviewer_menu_all_items_custom_commands.xml", "/assets/cadviewer/app/cv/cv-pro/menu_config/");
 		// cadviewer.cvjs_setTopMenuXML("floorPlan", "cadviewer_viewonly_usecase_chn_01.xml", "/cadviewer/app/cv/cv-pro/menu_config/"); 
 
