@@ -466,6 +466,10 @@ export default {
 		
 		// cadviewer.cvjs_loadCADViewerLanguage("Chinese-Simplified", "/cadviewer/app/cv/cv-pro/custom_language_table/custom_cadviewerProLanguage.xml");
 
+		
+		cadviewer.cvjs_setCADViewerSkin("dark-skin"); // dark-skin, light-skin lightgray, black, deepblue  // method can be omitted, alternative is "deepblue" , "nextcloud"
+
+
 
 		 cadviewer.cvjs_DisplayCoordinatesMenu("floorPlan",true);
 
