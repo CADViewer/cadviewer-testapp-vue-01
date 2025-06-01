@@ -371,7 +371,7 @@ export default {
 		var ServerBackEndUrl = "http://localhost:3000/";
 		var ServerLocation = "";
 		// Set all paths, and handlers, changes these depending on back-end server
-		cadviewer.cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "NodeJS", "ReactJS", "floorPlan");
+		cadviewer.cvjs_setAllServerPaths_and_Handlers(ServerBackEndUrl, ServerUrl, ServerLocation, "NodeJS", "VueJS", "floorPlan");
 		// END Standard NodeJS Conversion server
 // */
 
@@ -467,7 +467,7 @@ export default {
 		// cadviewer.cvjs_loadCADViewerLanguage("Chinese-Simplified", "/cadviewer/app/cv/cv-pro/custom_language_table/custom_cadviewerProLanguage.xml");
 
 		
-		cadviewer.cvjs_setCADViewerSkin("dark-skin"); // dark-skin, light-skin lightgray, black, deepblue  // method can be omitted, alternative is "deepblue" , "nextcloud"
+		cadviewer.cvjs_setCADViewerSkin("light-skin"); // dark-skin, light-skin lightgray, black, deepblue  // method can be omitted, alternative is "deepblue" , "nextcloud"
 
 
 
